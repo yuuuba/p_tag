@@ -1,2 +1,10 @@
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
+<h2>タイトル : <%= @article.title %></h2>
+
+<% @article.tags.each do |tag| %>
+  <p>#<%= tag.tag_name %></p>
+<% end %>
+
+<h3>本文</h3>
+<hr>
+
+<p><%= @article.content %></p>

@@ -1,2 +1,16 @@
-<h1>Articles#new</h1>
-<p>Find me in app/views/articles/new.html.erb</p>
+<h1>ブログ投稿画面</h1>
+
+<%= form_with model: @article, local: true do |f| %>
+
+  <p><%= f.label :title, "タイトル" %></p>
+  <p><%= f.text_field :title %></p>
+
+  <p><%= f.label :tag_names, "タグ" %></p>
+  <p><%= f.text_field :tag_names %></p>
+
+  <p><%= f.label :content, "本文" %></p>
+  <p><%= f.text_area :content %></p>
+
+  <%= f.submit '投稿' %>
+
+<% end %>
